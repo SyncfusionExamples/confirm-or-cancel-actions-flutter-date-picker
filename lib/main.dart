@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
-void main() => runApp(ActionsButton());
+void main() => runApp(const ActionsButton());
 
 class ActionsButton extends StatelessWidget {
+  const ActionsButton({super.key});
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: ActionsButtonPicker(),
     );
@@ -15,6 +17,8 @@ class ActionsButton extends StatelessWidget {
 }
 
 class ActionsButtonPicker extends StatefulWidget {
+  const ActionsButtonPicker({super.key});
+
   @override
   _ActionsButtonPickerState createState() => _ActionsButtonPickerState();
 }
@@ -42,7 +46,7 @@ class _ActionsButtonPickerState extends State<ActionsButtonPicker> {
                       duration: Duration(milliseconds: 500),
                     ));
                   },
-                  onSubmit: (Object value) {
+                  onSubmit: (object) {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text(
                         'Selection Confirmed',
